@@ -23,7 +23,7 @@ public class Landing extends javax.swing.JFrame {
 
         jLabel2.setText("Choose user type");
 
-        need_help.setText("I require help");
+        need_help.setText("I require help / assistance");
         need_help.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 need_helpActionPerformed(evt);
@@ -37,7 +37,7 @@ public class Landing extends javax.swing.JFrame {
             }
         });
 
-        bade_aadmi.setText("Government authority");
+        bade_aadmi.setText("Government authority sign in");
         bade_aadmi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bade_aadmiActionPerformed(evt);
@@ -51,7 +51,7 @@ public class Landing extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Register as NGO");
+        jButton1.setText("Register as NGO or update Status");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -76,7 +76,7 @@ public class Landing extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jLabel1)))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(160, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -21,6 +21,7 @@ public class Factory {
             case 4: {
                 MissingPers pers = new MissingPers();
                 pers.setVisible(true);
+                break;
             }
             case 5: {
                 NGO newNGO = new NGO();

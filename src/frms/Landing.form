@@ -41,7 +41,7 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="203" max="32767" attributes="0"/>
+              <EmptySpace pref="160" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -80,7 +80,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="need_help">
       <Properties>
-        <Property name="text" type="java.lang.String" value="I require help"/>
+        <Property name="text" type="java.lang.String" value="I require help / assistance"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="need_helpActionPerformed"/>
@@ -96,7 +96,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="bade_aadmi">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Government authority"/>
+        <Property name="text" type="java.lang.String" value="Government authority sign in"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bade_aadmiActionPerformed"/>
@@ -112,7 +112,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Register as NGO"/>
+        <Property name="text" type="java.lang.String" value="Register as NGO or update Status"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
