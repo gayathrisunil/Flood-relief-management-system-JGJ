@@ -16,6 +16,7 @@ public class Landing extends javax.swing.JFrame {
         bade_aadmi = new javax.swing.JButton();
         missing_person = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,32 +59,39 @@ public class Landing extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Emergency Call");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(missing_person)
+                        .addComponent(bade_aadmi)
+                        .addComponent(cool_ppl)
+                        .addComponent(need_help)
+                        .addComponent(jLabel2)
+                        .addComponent(jButton1)
+                        .addComponent(jButton2))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(missing_person)
-                            .addComponent(bade_aadmi)
-                            .addComponent(cool_ppl)
-                            .addComponent(need_help)
-                            .addComponent(jLabel2)
-                            .addComponent(jButton1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel1)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addGap(45, 45, 45)))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(need_help)
@@ -95,7 +103,9 @@ public class Landing extends javax.swing.JFrame {
                 .addComponent(missing_person)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -129,6 +139,11 @@ public class Landing extends javax.swing.JFrame {
         Factory.init_type(5);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Factory.init_type(6);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     public static void main(String args[]) {
  
@@ -161,6 +176,7 @@ public class Landing extends javax.swing.JFrame {
     private javax.swing.JButton bade_aadmi;
     private javax.swing.JButton cool_ppl;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton missing_person;

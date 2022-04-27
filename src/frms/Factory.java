@@ -26,6 +26,12 @@ public class Factory {
             case 5: {
                 NGO newNGO = new NGO();
                 newNGO.setVisible(true);
+                break;
+            }
+            case 6: {
+                CallPage call = new CallPage();
+                call.setVisible(true);
+                break;
             }
             default: ;
             

@@ -19,8 +19,9 @@ public class ServiceInit {
                 break;
             }
             case 4: {
-                MoneyPage money = new MoneyPage();
-                money.setVisible(true);
+                MoneyReqPage moneyreq = new MoneyReqPage();
+                moneyreq.setVisible(true);
+                break;
             }
             default: ;
             
