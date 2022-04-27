@@ -138,8 +138,9 @@ public class HelpType extends javax.swing.JFrame {
         String reg_num = mobno.getText();
         JOptionPane.showMessageDialog(null, "Registered " + reg_num + " into db" , "Success", JOptionPane.INFORMATION_MESSAGE);
         
-        //add code to add the number into database if it hasnt already been entered
-        //database stuff
+        // call to db class
+        DB dbobj = new DB();
+        dbobj.insert_into_db();
         
     }//GEN-LAST:event_entermobileActionPerformed
 
