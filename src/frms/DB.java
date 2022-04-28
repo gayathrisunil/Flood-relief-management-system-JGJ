@@ -35,4 +35,15 @@ public class DB {
         exec.execute_query(query); 
     }
     
+    public void insert_into_ngo_reg(String name, String mob_no, String addr, String stat){
+        query = "INSERT INTO ngo_reg VALUES ('" + name + "' , '" + mob_no + "' , '" + addr + "' , '"  + stat + "')";
+        ExecuteDBQ exec = new ExecuteDBQ();
+        exec.execute_query(query); 
+    }
+    
+    public void update_ngo(String name, String stat){
+        query = "UPDATE ngo_reg SET stat ='" + stat + "' where name = '" + name + "';" ;
+        ExecuteDBQ exec = new ExecuteDBQ();
+        exec.execute_query(query); 
+    }
 }

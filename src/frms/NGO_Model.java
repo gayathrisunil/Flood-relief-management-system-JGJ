@@ -6,21 +6,27 @@ public class NGO_Model {
     String NGO_addr;
     String NGO_stat;
     
-   public void setName(String name){
-       this.NGO_name = name;
-   }
-   
-   public void setMob (String mob){
-       this.NGO_mob = mob;
-   }
-   
-   public void setAddr(String addr){
-       this.NGO_addr = addr;
-   }
-   
-   public void setStat(String stat){
-       this.NGO_stat = stat;
-   }
+    public NGO_Model(String name, String mob, String addr, String stat) {
+        NGO_name = name;
+        NGO_mob = mob;
+        NGO_addr = addr;
+        NGO_stat = stat;
+    }
+//   public void setName(String name){
+//       this.NGO_name = name;
+//   }
+//   
+//   public void setMob (String mob){
+//       this.NGO_mob = mob;
+//   }
+//   
+//   public void setAddr(String addr){
+//       this.NGO_addr = addr;
+//   }
+//   
+//   public void setStat(String stat){
+//       this.NGO_stat = stat;
+//   }
    
    public String getName(){
        return NGO_name;

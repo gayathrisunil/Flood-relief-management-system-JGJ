@@ -48,7 +48,7 @@ public class NGO extends javax.swing.JFrame {
 
         jLabel4.setText("Address");
 
-        jLabel5.setText("Status");
+        jLabel5.setText("Status (Y or N)");
 
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -145,13 +145,15 @@ public class NGO extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        NGO_Model model = new NGO_Model();
-        model.setName(nameTF.getText());
-        model.setMob(mobTF.getText());
-        model.setAddr(addrTF.getText());
-        model.setStat(statTF.getText());
+        NGO_Model model = new NGO_Model(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());
+//        model.setName(nameTF.getText());
+//        model.setMob(mobTF.getText());
+//        model.setAddr(addrTF.getText());
+//        model.setStat(statTF.getText());
+
+        System.out.println("These values have been passed:"+ model.getName()+" "+ model.getMob()+ " "+ model.getAddr()+ " "+ model.getStat());
         
-        NGO_Controller cont = new NGO_Controller();
+        NGO_Controller cont = new NGO_Controller(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());
         cont.process_reg();
         
         
@@ -159,11 +161,9 @@ public class NGO extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        NGO_Model model = new NGO_Model();
-        model.setName(nameTF.getText());
-        model.setStat(statTF.getText());
+        NGO_Model model = new NGO_Model(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());
         
-        NGO_Controller cont = new NGO_Controller();
+        NGO_Controller cont = new NGO_Controller(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());
         cont.update_stat();
         
     }//GEN-LAST:event_jButton2ActionPerformed
