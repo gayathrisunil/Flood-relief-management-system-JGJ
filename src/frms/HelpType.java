@@ -142,7 +142,7 @@ public class HelpType extends javax.swing.JFrame {
         
         // call to db class
         DB dbobj = new DB();
-        String returned = dbobj.get_from_db("reg_for_req","mob_no",reg_num);
+        String returned = dbobj.get_from_db("reg_for_req","mob_no",reg_num,"mob_no");
         if(returned.equals(reg_num)){
             JOptionPane.showMessageDialog(null, "Already registered this number" , "", JOptionPane.INFORMATION_MESSAGE);
         

@@ -8,6 +8,7 @@ public class VolunteerProc {
     String item;
     String qty;
     String accept;
+    
     public void setVals(String mobno,String donate_to, String item, String qty){
         this.mobno= mobno;
         this.donate_to = donate_to;
@@ -16,14 +17,12 @@ public class VolunteerProc {
     }
     
     public void send_donation(){
- 
         //check if ngo is accepting, if yes then process successfully, if no, decline
         DB db = new DB();
-        accept = db.get_from_db("ngo_reg", "name", donate_to);
-                
-//        String status = "true";
-        
-        if(accept=="Y"){
+        accept = db.get_from_db("ngo_reg", "name", donate_to, "stat");
+       System.out.println(accept);
+       
+        if(accept.equals("Y")){
             
             DB dbreq = new DB();
             dbreq.insert_into_donation_kind(mobno, donate_to, item, qty);

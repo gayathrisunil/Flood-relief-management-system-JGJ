@@ -3,11 +3,20 @@ package frms;
 public class DB {
     String query;
     String result;
-    public String get_from_db(String table, String cond, String val){
-        query = "SELECT * FROM " + table + " WHERE " + cond + "= '"+ val + "';";
+    String[] arr_res = new String[10];
+    public String get_from_db(String table, String cond, String val, String fetch){
+        query = "SELECT " +fetch+ " FROM " + table + " WHERE " + cond + "= '"+ val + "';";
         ExecuteDBQ exec = new ExecuteDBQ();
-        result = exec.fetch_execute(query);
+        result = exec.fetch_execute(query,fetch);
         return result;
+    }
+    
+    public String[] fetch_all(String table){
+        query = "SELECT * FROM " + table + ";" ;
+        query.toString();
+        ExecuteDBQ exec = new ExecuteDBQ();
+        arr_res = exec.fetch(query);
+        return arr_res;
     }
     
     public void insert_into_db_reg(String mobnum, String aadhar){

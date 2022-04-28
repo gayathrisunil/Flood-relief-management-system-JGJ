@@ -32,7 +32,7 @@ public class ExecuteDBQ {
         }    
     }
     
-    public String fetch_execute(String stmt){
+    public String fetch_execute(String stmt, String cond){
         query = stmt;
         
         try {
@@ -42,7 +42,9 @@ public class ExecuteDBQ {
             ResultSet rs = st.executeQuery(query);
             
              while (rs.next()){
-                 return rs.getString("mob_no");
+           //System.out.println(rs.getString(cond));
+                 return rs.getString(cond);
+                 
              }
             
         } 
@@ -50,5 +52,30 @@ public class ExecuteDBQ {
             //System.out.println(e.getMessage());
         }    
         return "";
+    }
+    
+    public String[] fetch(String stmt){
+        query = stmt;
+        String[] results = new String[10];
+        
+        try {
+            conn= DriverManager.getConnection(database_conn_string, database_user_name, database_user_password);
+            
+            Statement st = conn.createStatement();
+            
+            ResultSet rs = st.executeQuery(query);
+            int i=0;
+             while (rs.next()){
+//                System.out.println(rs.getString(1));
+                String make  = rs.getString(1)+ "\t" + rs.getString(2)+ "\t" + rs.getString(3) + "\n";
+                results[i] = make;
+                i= i+ 1;
+             }
+            return results;
+        } 
+        catch (SQLException e){
+            System.out.println(e.getMessage());
+        }    
+        return results ;
     }
 }

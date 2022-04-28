@@ -127,7 +127,7 @@ public class ResourcePage extends javax.swing.JFrame {
         textarea.append(desc + " " + chosen + "\n");
         
         DB dbreq = new DB();
-        dbreq.insert_into_res(mob_no,desc,chosen);
+        dbreq.insert_into_res(mob_no,chosen, desc);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
