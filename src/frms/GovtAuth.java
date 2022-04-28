@@ -9,6 +9,7 @@ public class GovtAuth extends javax.swing.JFrame {
 
     String table;
     String[] arr_res;
+    int n;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -25,7 +26,7 @@ public class GovtAuth extends javax.swing.JFrame {
 
         jLabel1.setText("Government Authority");
 
-        typeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Evacuation", "Resources", "Money", "Medical Assistance" }));
+        typeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Evacuation", "Resources", "Missing Persons", "Money" }));
 
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -51,12 +52,12 @@ public class GovtAuth extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addComponent(jLabel2)
-                            .addGap(36, 36, 36)
+                            .addGap(65, 65, 65)
                             .addComponent(typeCB, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,24 +80,33 @@ public class GovtAuth extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DB dbreq = new DB();
         String type = typeCB.getSelectedItem().toString();
-        
+    
         switch(type){
             case "Evacuation": {
-                table= "evac_req";
+                table = "evac_req";
+                n=3;
                 TA.setText(null);
                 TA.append("Mobile Number  Requested Item  Amount Needed\n");
                 break;
             }
             case "Resources": {
-                table= "resource_req";
+                table = "resource_req";
+                n=3;
                 TA.setText(null);
                 TA.append("Mobile Number  Name  Location\n");
+                break;
+            }
+            case "Missing Persons": {
+                table = "missing";
+                n=6;
+                TA.setText(null);
+                TA.append("Filing Name and Ph no     Missing Name and Ph number    Last seen  Last known location\n");
                 break;
             }
             default: ;
         }
         
-        arr_res = dbreq.fetch_all(table);
+        arr_res = dbreq.fetch_all(table,n);
         for(int i=0 ; i<arr_res.length; i++){
             TA.append(arr_res[i]);
         }

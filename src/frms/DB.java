@@ -11,11 +11,11 @@ public class DB {
         return result;
     }
     
-    public String[] fetch_all(String table){
+    public String[] fetch_all(String table,int n){
         query = "SELECT * FROM " + table + ";" ;
         query.toString();
         ExecuteDBQ exec = new ExecuteDBQ();
-        arr_res = exec.fetch(query);
+        arr_res = exec.fetch(query,n);
         return arr_res;
     }
     
@@ -52,6 +52,12 @@ public class DB {
     
     public void update_ngo(String name, String stat){
         query = "UPDATE ngo_reg SET stat ='" + stat + "' where name = '" + name + "';" ;
+        ExecuteDBQ exec = new ExecuteDBQ();
+        exec.execute_query(query); 
+    }
+    
+    public void insert_into_missing(String filling_name, String filling_mob, String missing_name, String missing_mob, String last_seen, String last_loc){
+        query = "INSERT INTO missing VALUES ('" + filling_name + "' , '" + filling_mob +"' , '" + missing_name + "' , '" + missing_mob + "' , '" + last_seen + "' , '" + last_loc + "') ;";
         ExecuteDBQ exec = new ExecuteDBQ();
         exec.execute_query(query); 
     }

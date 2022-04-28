@@ -42,7 +42,7 @@ public class ExecuteDBQ {
             ResultSet rs = st.executeQuery(query);
             
              while (rs.next()){
-           //System.out.println(rs.getString(cond));
+                //System.out.println(rs.getString(cond));
                  return rs.getString(cond);
                  
              }
@@ -54,7 +54,7 @@ public class ExecuteDBQ {
         return "";
     }
     
-    public String[] fetch(String stmt){
+    public String[] fetch(String stmt, int n){
         query = stmt;
         String[] results = new String[10];
         
@@ -66,8 +66,15 @@ public class ExecuteDBQ {
             ResultSet rs = st.executeQuery(query);
             int i=0;
              while (rs.next()){
-//                System.out.println(rs.getString(1));
-                String make  = rs.getString(1)+ "\t" + rs.getString(2)+ "\t" + rs.getString(3) + "\n";
+                //System.out.println(rs.getString(1));
+                
+                String make = "";
+                for(int k=1; k<=n; k++){
+                    String temp = rs.getString(k) + "\t ";
+                    make+= temp;
+                }
+                make+= "\n";
+                //rs.getString(1)+ "\t  " + rs.getString(2)+ "\t   " + rs.getString(3) + "\n";
                 results[i] = make;
                 i= i+ 1;
              }
