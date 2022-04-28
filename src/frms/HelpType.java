@@ -136,11 +136,18 @@ public class HelpType extends javax.swing.JFrame {
     private void entermobileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entermobileActionPerformed
         // TODO add your handling code here:
         String reg_num = mobno.getText();
-        JOptionPane.showMessageDialog(null, "Registered " + reg_num + " into db" , "Success", JOptionPane.INFORMATION_MESSAGE);
         String aadhar_num = "";
         
-// call to db class
+        // call to db class
         DB dbobj = new DB();
+        String returned = dbobj.get_from_db("reg_for_req","mob_no",reg_num);
+        if(returned.equals(reg_num)){
+            JOptionPane.showMessageDialog(null, "Already registered this number" , "", JOptionPane.INFORMATION_MESSAGE);
+        
+        }
+        else {
+          JOptionPane.showMessageDialog(null, "Registered " + reg_num + " into db" , "Success", JOptionPane.INFORMATION_MESSAGE);  
+        }
         dbobj.insert_into_db_reg(reg_num, aadhar_num);
         
     }//GEN-LAST:event_entermobileActionPerformed

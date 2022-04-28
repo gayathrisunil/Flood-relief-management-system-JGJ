@@ -1,13 +1,17 @@
-
 package frms;
 
-import javax.swing.JOptionPane;
+import java. util. Random;
 
 public class EvacController {
     
-    public static void getLocation(){
+    String loc;
+    String[] arr_loc ={"Kannur", "Kasargod", "Mallapuram", "Pathanamthitta", "Wayanad"};
+    
+    Random r=new Random();   
+    int choice = r.nextInt(arr_loc.length);
+    public String getLocation(){
         //can add logic to get live location
-        JOptionPane.showMessageDialog(null, "Location Tracking ON ", "Sent location details", JOptionPane.INFORMATION_MESSAGE);
+        return arr_loc[choice];
     }
     
 }
