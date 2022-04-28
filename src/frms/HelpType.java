@@ -4,10 +4,10 @@ import javax.swing.JOptionPane;
 
 public class HelpType extends javax.swing.JFrame {
     
+    String reg_num;
     public HelpType() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -130,13 +130,15 @@ public class HelpType extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mobnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mobnoActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_mobnoActionPerformed
 
     private void entermobileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entermobileActionPerformed
         // TODO add your handling code here:
-        String reg_num = mobno.getText();
+        reg_num = mobno.getText();
         String aadhar_num = "";
+        
+        
         
         // call to db class
         DB dbobj = new DB();
@@ -153,12 +155,10 @@ public class HelpType extends javax.swing.JFrame {
     }//GEN-LAST:event_entermobileActionPerformed
 
     private void evacuate_helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_evacuate_helpActionPerformed
-        
         ServiceInit.page_init(1);
     }//GEN-LAST:event_evacuate_helpActionPerformed
 
     private void resource_helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resource_helpActionPerformed
-        
         ServiceInit.page_init(2);
     }//GEN-LAST:event_resource_helpActionPerformed
 
@@ -170,6 +170,9 @@ public class HelpType extends javax.swing.JFrame {
         ServiceInit.page_init(4);   
     }//GEN-LAST:event_money_helpActionPerformed
 
+    public String getmob(){
+        return reg_num;
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
