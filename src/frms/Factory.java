@@ -4,33 +4,33 @@ public class Factory {
     public static void init_type(int usertype){
         switch(usertype){
             case 1: {
-                HelpType helpchoice = new HelpType();
-                helpchoice.setVisible(true);
+                Factoryint fi1 = new CreateHelpType();
+                fi1.making_new_page();
                 break;
             }
             case 2: {
-                VolunteerGUI volpage = new VolunteerGUI();
-                volpage.setVisible(true);
+                Factoryint fi1 = new CreateVolunteerPage();
+                fi1.making_new_page();
                 break;
             }
             case 3: {
-                GovtAuth govpage = new GovtAuth();
-                govpage.setVisible(true);
+                Factoryint fi1 = new CreateGovtAuth();
+                fi1.making_new_page();
                 break;
             }
             case 4: {
-                MissingPers pers = new MissingPers();
-                pers.setVisible(true);
+                Factoryint fi1 = new CreateMissingPage();
+                fi1.making_new_page();
                 break;
             }
             case 5: {
-                NGO newNGO = new NGO();
-                newNGO.setVisible(true);
+                Factoryint fi1 = new CreateNGOPage();
+                fi1.making_new_page();
                 break;
             }
             case 6: {
-                CallPage call = new CallPage();
-                call.setVisible(true);
+                Factoryint fi1 = new CreateCallPage();
+                fi1.making_new_page();
                 break;
             }
             default: ;
