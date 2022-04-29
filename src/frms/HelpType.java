@@ -134,11 +134,9 @@ public class HelpType extends javax.swing.JFrame {
     }//GEN-LAST:event_mobnoActionPerformed
 
     private void entermobileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entermobileActionPerformed
-        // TODO add your handling code here:
+
         reg_num = mobno.getText();
         String aadhar_num = "";
-        
-        
         
         // call to db class
         DB dbobj = new DB();

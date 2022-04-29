@@ -6,12 +6,9 @@ public class ResourcePage extends javax.swing.JFrame {
         initComponents();
         
     }
-
-    //String[] items = new String[] {"Blankets", "Clothes","Torch", "Pads"};
     String chosen= "";
     String desc = "";
     String mob_no="";
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
