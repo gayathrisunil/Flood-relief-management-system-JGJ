@@ -1,6 +1,8 @@
 
 package frms;
 
+import javax.swing.JOptionPane;
+
 
 public class MissingPers extends javax.swing.JFrame {
 
@@ -140,6 +142,7 @@ public class MissingPers extends javax.swing.JFrame {
         
         DB dbreq = new DB();
         dbreq.insert_into_missing(filling_name, filling_mob, missing_name, missing_mob, last_seen, last_loc);
+        JOptionPane.showMessageDialog(null, "Registered missing person complaint" , "Success", JOptionPane.INFORMATION_MESSAGE);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

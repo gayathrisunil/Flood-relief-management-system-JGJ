@@ -2,7 +2,6 @@ package frms;
 
 import javax.swing.JOptionPane;
 
-
 public class NGO_Controller{
    
     String name,mob,addr,stat;
@@ -22,7 +21,6 @@ public class NGO_Controller{
     }
     
     public void update_stat(){
-        
         //call to db to update 
         DB dbreq = new DB();
         dbreq.update_ngo(name, stat);

@@ -1,8 +1,6 @@
-
 package frms;
 
 public class NGO extends javax.swing.JFrame {
-
     
     public NGO() {
         initComponents();
@@ -136,20 +134,16 @@ public class NGO extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTFActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_nameTFActionPerformed
 
     private void mobTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mobTFActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_mobTFActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         NGO_Model model = new NGO_Model(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());
-//        model.setName(nameTF.getText());
-//        model.setMob(mobTF.getText());
-//        model.setAddr(addrTF.getText());
-//        model.setStat(statTF.getText());
 
         System.out.println("These values have been passed:"+ model.getName()+" "+ model.getMob()+ " "+ model.getAddr()+ " "+ model.getStat());
         
@@ -160,7 +154,7 @@ public class NGO extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
         NGO_Model model = new NGO_Model(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());
         
         NGO_Controller cont = new NGO_Controller(nameTF.getText(),mobTF.getText(),addrTF.getText(),statTF.getText());

@@ -18,8 +18,6 @@ public class ExecuteDBQ {
         query = stmt;
         try {
             conn= DriverManager.getConnection(database_conn_string, database_user_name, database_user_password);
-            //System.out.println("You are successfully connected to the PostgreSQL database server.");
-            
             PreparedStatement statement = conn.prepareStatement(query);
             int rowsInserted = statement.executeUpdate();
 
